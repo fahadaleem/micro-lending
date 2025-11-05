@@ -1,8 +1,7 @@
-// src/components/finance-manager/layout/FinanceManagerLayout.jsx
 import { Outlet } from "react-router-dom";
-import Sidebar from "../ui/sidebar.jsx";
-import Header from "./dashboard/Header.jsx";
-import { HeaderProvider } from "./HeaderContext";
+import Sidebar from "./Sidebar.jsx";
+import Header from "./Header.jsx";
+import { HeaderProvider } from "../../contexts/HeaderContext";
 
 export default function FinanceManagerLayout() {
   return (

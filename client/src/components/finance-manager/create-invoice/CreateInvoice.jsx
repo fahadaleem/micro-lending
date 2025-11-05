@@ -23,11 +23,11 @@ import {
   transformInvoiceFormToPayload,
 } from "../../../lib/utils";
 import { useLayoutEffect } from "react";
-import { useHeader } from "../HeaderContext";
+import { useHeader } from "../../../contexts/HeaderContext";
 import { useNavigate } from "react-router-dom";
 import { invoicesApi } from "../../../services/api";
 import toast from "react-hot-toast";
-import DateField from "../dashboard/fields/DateField";
+import DateField from "../../form/DateField";
 
 export default function CreateInvoice() {
   const navigate = useNavigate();

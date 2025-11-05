@@ -3,9 +3,9 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import DashboardPage from "./pages/DashboardPage.jsx";
-import FinanceManagerLayout from "./components/finance-manager/FinanceManagerLayout.jsx";
+import FinanceManagerLayout from "./components/layout/FinanceManagerLayout.jsx";
 import CreateInvoicePage from "./pages/CreateInvoicePage.jsx";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 import { Toaster } from "react-hot-toast";
 import PayInvoice from "./pages/PayInvoice.jsx";
 function App() {

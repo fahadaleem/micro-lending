@@ -1,5 +1,5 @@
 import React from "react";
-import { Input } from "../../../ui/input";
+import { Input } from "../ui/input";
 
 export default function TextField({ value, onChange, onKeyDown, placeholder }) {
   return (

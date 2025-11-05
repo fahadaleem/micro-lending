@@ -5,7 +5,7 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
-} from "../../../ui/select";
+} from "../ui/select";
 
 export default function SelectField({ value, onChange, options = [] }) {
   return (

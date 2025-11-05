@@ -20,10 +20,10 @@ import {
 } from "../../ui/select";
 
 // Field components (extracted)
-import TextField from "./fields/TextField";
-import NumberField from "./fields/NumberField";
-import DateField from "./fields/DateField";
-import SelectField from "./fields/SelectField";
+import TextField from "../../form/TextField";
+import NumberField from "../../form/NumberField";
+import DateField from "../../form/DateField";
+import SelectField from "../../form/SelectField";
 
 /**
  * Filters component

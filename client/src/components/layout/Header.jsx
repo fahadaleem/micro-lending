@@ -1,9 +1,8 @@
-// src/components/Header.tsx
 import { PlusCircle } from "lucide-react";
-import { Button } from "../../ui/button";
-import { Tooltip, TooltipTrigger, TooltipContent } from "../../ui/tooltip";
+import { Button } from "../ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 import { useNavigate } from "react-router-dom";
-import { useHeader } from "../HeaderContext";
+import { useHeader } from "../../contexts/HeaderContext";
 
 export default function Header() {
   const navigate = useNavigate();

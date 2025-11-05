@@ -11,7 +11,7 @@ import { MoreHorizontal, Link, CheckCircle, Trash2 } from "lucide-react";
 import { invoicesApi } from "../../../services/api";
 import { toast } from "react-hot-toast";
 import React from "react";
-import ConfirmationModal from "../../ui/ConfirmationModal";
+import ConfirmationModal from "../../common/ConfirmationModal";
 
 export default function InvoiceActionsDropdown({
   invoiceId,

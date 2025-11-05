@@ -7,8 +7,8 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from "./dialog";
-import { Button } from "./button";
+} from "../ui/dialog";
+import { Button } from "../ui/button";
 
 export default function ConfirmationModal({
   open,

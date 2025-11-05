@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Header from "./Header";
-import { useHeader } from "../HeaderContext";
+import { useHeader } from "../../../contexts/HeaderContext";
 import InvoiceDataTable from "./DataTable";
-import SearchField from "./SearchField";
 import Filters from "./Filters";
 import { Badge } from "../../ui/badge";
 import { X } from "lucide-react";

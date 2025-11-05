@@ -24,14 +24,23 @@ export const getAllInvoices = asyncHandler(async (req, res, next) => {
         const { key, value, op } = filter;
         if (!key || value === undefined || value === null) continue;
 
+        // Check if the key is a date field
+        const isDateField = key === "invoice_date" || key === "due_date";
+
         if (op === "eq") {
           query[key] = value;
         } else if (op === "contains") {
           query[key] = { $regex: value, $options: "i" };
         } else if (op === "gt") {
-          query[key] = { $gt: Number(value) };
+          // For date fields, use the value as-is (string date comparison works in MongoDB)
+          // For number fields, convert to number
+          query[key] = { $gt: isDateField ? value : Number(value) };
         } else if (op === "lt") {
-          query[key] = { $lt: Number(value) };
+          query[key] = { $lt: isDateField ? value : Number(value) };
+        } else if (op === "gte") {
+          query[key] = { $gte: isDateField ? value : Number(value) };
+        } else if (op === "lte") {
+          query[key] = { $lte: isDateField ? value : Number(value) };
         }
       }
     } catch (e) {
