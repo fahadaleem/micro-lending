@@ -15,6 +15,7 @@ import ConfirmationModal from "../../common/ConfirmationModal";
 
 export default function InvoiceActionsDropdown({
   invoiceId,
+  invoiceIdentifier,
   isPaid,
   onUpdated,
 }) {
@@ -138,7 +139,9 @@ export default function InvoiceActionsDropdown({
         open={openDelete}
         onOpenChange={setOpenDelete}
         title='Delete invoice'
-        description={`Are you sure you want to delete invoice ${invoiceId}? This action cannot be undone.`}
+        description={`Are you sure you want to delete invoice ${
+          invoiceIdentifier || invoiceId
+        }? This action cannot be undone.`}
         confirmLabel='Delete'
         cancelLabel='Cancel'
         confirmVariant='destructive'

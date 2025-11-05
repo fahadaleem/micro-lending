@@ -273,6 +273,7 @@ export default function InvoiceDataTable({
                   <TableCell className='text-right'>
                     <InvoiceActionsDropdown
                       invoiceId={payment.id}
+                      invoiceIdentifier={payment.invoice}
                       isPaid={payment.status === "paid"}
                       onUpdated={onRefresh}
                     />
