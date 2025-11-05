@@ -172,7 +172,6 @@ The server will be available at `http://localhost:3000`
 | `npm run dev`  | Start server in development mode with nodemon |
 | `npm start`    | Start server in production mode               |
 | `npm run seed` | Seed database with initial data               |
-| `npm test`     | Run tests (not implemented yet)               |
 
 ## 🔐 Authentication
 
