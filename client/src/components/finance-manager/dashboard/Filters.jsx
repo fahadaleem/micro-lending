@@ -48,8 +48,6 @@ export default function Filters({
   const [operator, setOperator] = useState("equals");
   const [activeChips, setActiveChips] = useState({});
 
-  // operatorsMap moved to constants (imported)
-
   /**
    * Get operator list for a given filter type
    * @param {string} type - filter type (text|number|date|select)

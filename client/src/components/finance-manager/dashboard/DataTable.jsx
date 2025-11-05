@@ -76,9 +76,6 @@ export default function InvoiceDataTable({
   sortDir = "asc",
   onSort = () => {},
 }) {
-  // sortBy and sortDir are now props from parent (Dashboard)
-
-  // Transform API invoices to table format (no client-side filtering/pagination)
   const paginatedData = useMemo(() => {
     return invoices.map((inv) => ({
       id: inv.id,

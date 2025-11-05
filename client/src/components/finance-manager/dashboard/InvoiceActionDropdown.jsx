@@ -66,8 +66,6 @@ export default function InvoiceActionsDropdown({
     }
   };
 
-  // Copy invoice number action removed per requirement
-
   const handleDeleteInvoice = async () => {
     try {
       await invoicesApi.deleteInvoice(invoiceId);

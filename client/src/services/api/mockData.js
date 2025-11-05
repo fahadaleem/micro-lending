@@ -5,7 +5,7 @@ const MOCK_USERS = [
   {
     id: "user-1",
     email: "admin@microlending.com",
-    password: "admin123", // In real app, never store plain passwords
+    password: "admin123",
     name: "Admin User",
     role: "admin",
   },
