@@ -3,9 +3,8 @@ import jwt from "jsonwebtoken";
 import { ApiError, asyncHandler } from "../utils/errorMiddleware.js";
 import User from "../schema/User.js";
 
-// JWT Secret (in production, use environment variable)
-const JWT_SECRET =
-  process.env.JWT_SECRET || "your-secret-key-change-in-production";
+const JWT_SECRET = process.env.JWT_SECRET || "micro-lending-app-token";
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "7d";
 
 /**
  * Register a new user
@@ -40,7 +39,7 @@ export const register = asyncHandler(async (req, res, next) => {
   const token = jwt.sign(
     { id: newUser._id, email: newUser.email, role: newUser.role },
     JWT_SECRET,
-    { expiresIn: "7d" }
+    { expiresIn: JWT_EXPIRES_IN }
   );
 
   // Return user data (without password)
@@ -89,7 +88,7 @@ export const login = asyncHandler(async (req, res, next) => {
   const token = jwt.sign(
     { id: user._id, email: user.email, role: user.role },
     JWT_SECRET,
-    { expiresIn: "7d" }
+    { expiresIn: JWT_EXPIRES_IN }
   );
 
   // Return user data (without password)
