@@ -11,7 +11,7 @@ import {
 const DEFAULT_ROWS_PER_PAGE = 10;
 
 const availableFilters = [
-  { id: "invoice_number", label: "Invoice Number", icon: Hash, type: "text" },
+  { id: "identifier", label: "Invoice Number", icon: Hash, type: "text" },
   { id: "customer_name", label: "Customer Name", icon: User, type: "text" },
   { id: "amount_due", label: "Amount", icon: DollarSign, type: "number" },
   { id: "invoice_date", label: "Invoice Date", icon: Calendar, type: "date" },
@@ -22,7 +22,7 @@ const availableFilters = [
     icon: CheckCircle,
     type: "select",
   },
-  { id: "customer_number", label: "Customer Number", icon: Hash, type: "text" },
+  // { id: "customer_number", label: "Customer Number", icon: Hash, type: "text" }, // Field doesn't exist in schema
 ];
 
 // Operator mapping for API payloads
