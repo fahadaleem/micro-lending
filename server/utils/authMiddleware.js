@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
 import { ApiError } from "./errorMiddleware.js";
 
-const JWT_SECRET =
-  process.env.JWT_SECRET || "your-secret-key-change-in-production";
+const JWT_SECRET = process.env.JWT_SECRET || "micro-lending-app-token";
 
 /**
  * Authentication middleware
